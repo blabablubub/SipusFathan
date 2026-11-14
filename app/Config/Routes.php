@@ -27,6 +27,14 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/books/edit/(:num)', 'Books::edit/$1');
     $routes->post('/books/update/(:num)', 'Books::update/$1');
     $routes->post('/books/delete/(:num)', 'Books::delete/$1');
+
+    // Members
+    $routes->get('members', 'Members::index');
+    $routes->get('members/new', 'Members::new');
+    $routes->post('members/create', 'Members::create');
+    $routes->get('members/edit/(:num)', 'Members::edit/$1');
+    $routes->post('members/update/(:num)', 'Members::update/$1');
+    $routes->post('members/delete/(:num)', 'Members::delete/$1');
     
     // Ini route khusus Admin
     $routes->group('admin', ['filter' => 'role:admin'], static function ($routes) {

@@ -22,6 +22,10 @@
                    href="<?= site_url('categories') ?>">
                     Kategori
                 </a>
+                <a href="<?= site_url('members') ?>"
+                    class="nav-link <?= service('uri')->getSegment(1) === 'members' ? 'active' : '' ?>">
+                    Anggota
+                </a>
 
                 <a class="nav-link"
                    href="<?= site_url('books') ?>">
